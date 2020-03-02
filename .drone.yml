@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: default
+steps:
+  - name: backend
+    image: node
+    commands:
+      - npm install
+      - node index.js
+trigger:
+  branch:
+    - master
+  event:
+    - push
