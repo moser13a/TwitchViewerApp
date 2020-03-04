@@ -6,7 +6,6 @@ steps:
   - name: backend
     image: node
     commands:
-      - npm install
       - node index.js
 trigger:
   branch:
@@ -22,6 +21,6 @@ steps:
   - name: build
     image: node
     commands:
-      - npm install
+      - echo "testing"
 depends_on:
  - backend
